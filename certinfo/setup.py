@@ -1,3 +1,4 @@
+import setuptools  # required, e.g. from bdist_wheel
 from distutils.core import setup, Extension
 
 certinfo = Extension(
