@@ -3,6 +3,7 @@ SOURCES := $(shell find $(SOURCEDIR) -name '*.c')
 .PHONY: build
 build: fmt
 	python setup.py build
+	python setup.py sdist bdist_wheel
 	find . -type f -name "*.so" -exec cp {} . \; # so we can import directly
 
 .PHONY:

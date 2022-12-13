@@ -41,3 +41,21 @@ $ ldd build/lib.linux-x86_64-3.8/certinfo.cpython-38-x86_64-linux-gnu.so
         libresolv.so.2 => /lib/x86_64-linux-gnu/libresolv.so.2 (0x00007f7777222000)
         libffi.so.8 => /lib/x86_64-linux-gnu/libffi.so.8 (0x00007f7777215000)
 ```
+
+We can bundle a wheel, so we do not compile at the target site.
+
+```
+$ unzip -l dist/certinfo-1.0-cp38-cp38-linux_x86_64.whl
+Archive:  dist/certinfo-1.0-cp38-cp38-linux_x86_64.whl
+  Length      Date    Time    Name
+---------  ---------- -----   ----
+    45584  2022-12-13 22:28   certinfo.cpython-38-x86_64-linux-gnu.so
+      186  2022-12-13 22:28   certinfo-1.0.dist-info/METADATA
+      103  2022-12-13 22:28   certinfo-1.0.dist-info/WHEEL
+        9  2022-12-13 22:28   certinfo-1.0.dist-info/top_level.txt
+      390  2022-12-13 22:28   certinfo-1.0.dist-info/RECORD
+---------                     -------
+    46272                     5 files
+```
+
+However, the shared libraries still need to be present.
