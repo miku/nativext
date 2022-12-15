@@ -145,3 +145,29 @@ Unpacked archive contents:
   "version": "0.1.0"
 }
 ```
+
+Package libcurl itself has a few dependencies:
+
+```json
+$ cat info/index.json 
+{
+  "arch": "x86_64",
+  "build": "h2283fc2_1",
+  "build_number": 1,
+  "depends": [
+    "krb5 >=1.19.3,<1.20.0a0",
+    "libgcc-ng >=12",
+    "libnghttp2 >=1.47.0,<2.0a0",
+    "libssh2 >=1.10.0,<2.0a0",
+    "libzlib >=1.2.13,<1.3.0a0",
+    "openssl >=3.0.7,<4.0a0"
+  ],
+  "license": "curl",
+  "license_family": "MIT",
+  "name": "libcurl",
+  "platform": "linux",
+  "subdir": "linux-64",
+  "timestamp": 1667347234315,
+  "version": "7.86.0"
+}
+```
