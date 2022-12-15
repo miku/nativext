@@ -11,10 +11,10 @@ requirements:
     - python
     - setuptools
     - termcolor
-    - curl
+    - libcurl
 
   run:
     - python
     - termcolor
-    - curl
+    - libcurl
 
