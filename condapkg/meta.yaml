@@ -1,0 +1,20 @@
+package:
+  name: certinfo
+  version: 0.1.0
+
+source:
+  path: .
+
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - termcolor
+    - curl
+
+  run:
+    - python
+    - termcolor
+    - curl
+
